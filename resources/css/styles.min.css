@@ -723,458 +723,271 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   clear: both;
 }
 
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-display: swap;
-}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 15px 10px;
-  flex-wrap: wrap;
-  font-family: Quicksand, arial, verdana, sans-serif;
+  padding: 20px 20px 0;
+  margin: 0 auto;
+}
+.header a {
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
+  }
 }
 @media (min-width: 768px) {
   .header {
-    align-items: flex-start;
+    padding-bottom: 30px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .header {
-    margin: 15px 20px 25px;
-  }
-}
-@media (min-width: 1320px) {
-  .header {
-    margin-left: 0;
-    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .header .logo {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  color: #02377A;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 1.4;
+  font-size: 26px;
+  min-width: 200px;
 }
-.header .logo span {
-  font-weight: 500;
-  font-size: 14px;
-  display: block;
-}
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header .logo {
-    font-size: 1.6em;
-  }
-  .header .logo span {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 .header .logo:hover {
   text-decoration: none;
 }
-.header nav {
-  font-weight: bold;
-}
+
 @media (max-width: 767px) {
-  .header nav {
+  nav {
     flex: 0 0 100%;
-    margin-top: 10px;
+    margin-top: 20px;
   }
-  .js .header nav {
+  .js nav {
     overflow: hidden;
     transition: max-height 0.5s;
     margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  .js .header nav {
+  nav {
+    margin-top: 9px;
+  }
+  .js nav {
     max-height: none !important;
   }
 }
-.header nav ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 @media (max-width: 767px) {
-  .header nav ul {
-    margin-bottom: 10px;
+  nav ul {
+    margin-bottom: 20px;
   }
 }
-.header nav ul li {
+nav ul li {
   line-height: 1.5;
+  color: #D7C989;
+}
+nav ul li a, nav ul li a:visited {
+  color: #02377A;
+}
+nav ul li a.selected {
+  color: #D7C989 !important;
 }
 @media (max-width: 767px) {
-  .header nav ul li {
-    border-bottom: solid 1px #ccc;
-    line-height: 2.4;
+  nav ul li {
+    border-bottom: solid 1px #D7C989;
+    line-height: 2;
   }
-  .header nav ul li:last-child {
+  nav ul li:last-child {
     border: none;
   }
-  .header nav ul li a {
+  nav ul li a {
     display: block;
   }
 }
 @media (min-width: 768px) {
-  .header nav ul li {
+  nav ul li {
     display: inline;
-    margin-left: 20px;
-    font-size: 1.2em;
+    margin-left: 10px;
   }
-  .header nav ul li:first-child {
+  nav ul li:first-child {
     margin-left: 0;
   }
 }
-.header nav ul li.github a {
-  background: url(../img/GitHub-Mark-64px.png) no-repeat;
-  background-size: contain;
-  padding-left: 24px;
-}
 
-header .hamburger {
+.header .hamburger {
   vertical-align: middle;
   padding: 0;
 }
-.no-js header .hamburger {
-  display: none;
-}
-header .hamburger:focus {
+.header .hamburger:focus {
   outline: none;
 }
-header .hamburger:hover {
+.header .hamburger span.hamburger-inner, .header .hamburger span.hamburger-inner::before, .header .hamburger span.hamburger-inner::after {
+  background-color: #02377A;
+}
+.header .hamburger:hover {
   opacity: 1;
 }
 @media (min-width: 768px) {
-  header .hamburger {
+  .header .hamburger {
     display: none;
   }
 }
-header .hamburger .hamburger-inner, header .hamburger .hamburger-inner::before, header .hamburger .hamburger-inner::after {
+.header .hamburger .hamburger-inner, .header .hamburger .hamburger-inner::before, .header .hamburger .hamburger-inner::after {
   border-radius: 0;
 }
-header .hamburger .hamburger-box {
-  width: 30px;
-}
-header .hamburger .hamburger-inner,
-header .hamburger .hamburger-inner::before,
-header .hamburger .hamburger-inner::after {
-  width: 30px;
-  height: 3px;
-  background-color: black;
+.header .hamburger .hamburger-label {
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-footer {
-  padding: 15px;
+.footer {
+  border-top: solid 3px #D7C989;
+  padding: 15px 20px;
   margin-top: 40px;
-  margin-bottom: 20px;
-  border-top: solid 1px #ccc;
-  font-size: 1rem;
 }
-@media (min-width: 1320px) {
-  footer {
+.footer a {
+  text-decoration: none;
+}
+@media (min-width: 1280px) {
+  .footer {
     padding-left: 0;
     padding-right: 0;
   }
 }
-footer .footer__content {
-  color: #666;
-}
-footer .footer__content .copyright {
-  margin-bottom: 0.5em;
-  display: block;
-}
-@media (min-width: 1024px) {
-  footer .footer__content {
-    display: flex;
-    justify-content: space-between;
-  }
-  footer .footer__content:last-child {
-    text-align: right;
-  }
-}
-footer ul {
+.footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-footer ul li {
+.footer ul li {
   display: inline;
   margin-right: 10px;
 }
-footer ul li:last-child {
-  margin-right: 0;
-}
 
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-display: swap;
-}
-@media (min-width: 1024px) {
-  /* to stop pages jumping horizontally when scrollbar appears or disappears */
-  html {
-    overflow-y: scroll;
-  }
-}
 body {
-  font: 16px/1.5 Quicksand, arial, verdana, sans-serif;
+  font: 1rem/1.35 arial, verdana, sans-serif;
   margin: 0 auto;
-  overflow-wrap: break-word; /* so that inline elements such as long words do not cause horizontal scrolling. */
-}
-@media (min-width: 1024px) {
-  body {
-    font-size: 18px;
-  }
-}
-@media (min-width: 1320px) {
-  body {
-    max-width: 1280px;
-  }
+  max-width: 1100px;
 }
 
 a {
-  text-decoration: none;
-  color: #225E90;
+  color: #02377A;
+}
+a:visited {
+  color: purple;
 }
 a:hover {
   text-decoration: underline;
 }
-a.external {
-  background: url(../img/external.svg) no-repeat left center;
-  background-size: 16px;
-  padding-left: 20px;
-}
-
-h1, h2, h3, h4, p, ul, ol {
-  margin-bottom: 0;
-}
-
-h1, h2, h3, h4, p, li {
-  max-width: 80ch;
-}
-
-h1 {
-  font-size: 2.5em;
-  line-height: 1.3;
-}
-
-h2 {
-  font-size: 2em;
-  line-height: 1.3;
-}
-
-h3 {
-  font-size: 1.5em;
-  line-height: 1.3;
-}
-
-h4 {
-  font-size: 1em;
-  line-height: 1.5;
-}
 
 figure {
   margin: 0;
-  margin-top: 1em;
   max-width: 768px;
 }
-
-ul, ol {
-  padding-left: 20px;
-}
-
-img.responsive {
+figure img {
   width: 100%;
-  height: auto;
-  /* to fix blurry downscaled images in Chrome */
-  image-rendering: -webkit-optimize-contrast;
-}
-
-img.object-fit-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 main > article {
-  padding: 0 15px;
+  padding: 0 20px;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1140px) {
   main > article {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
   }
 }
+main > article h1, main > article h2, main > article h3, main > article p {
+  margin-bottom: 0;
+}
+main > article h1 {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  main > article h1 {
+    font-size: 2rem;
+  }
+}
+main > article h2 {
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  main > article h2 {
+    font-size: 1.5rem;
+  }
+}
+main > article p {
+  margin-top: 1rem;
+}
+main > article ul {
+  padding-left: 1.1rem;
+}
+main > article li {
+  margin-bottom: 0.5em;
+}
 
 .stage {
-  margin: 0 -15px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
-@media (min-width: 1320px) {
+@media (min-width: 768px) {
   .stage {
-    margin: 0;
+    position: relative;
+    margin-bottom: 40px;
+    height: 400px;
   }
-}
-.stage h1 {
-  margin-left: 20px;
-  margin-right: 20px;
 }
 .stage img {
-  vertical-align: bottom;
-}
-@media (min-width: 1024px) {
-  .stage {
-    display: flex;
-    background-color: rgb(34, 99, 153);
-    background: linear-gradient(45deg, rgb(29, 58, 82) 0%, rgb(34, 99, 153) 60%);
-    align-items: center;
-  }
-  .stage div {
-    order: 2;
-    width: 66.66%;
-    border-left: 5px solid white;
-    height: 50vh;
-  }
-  .stage h1 {
-    order: 1;
-    color: white;
-    margin: 0;
-    width: 33.33%;
-    padding: 2%;
-  }
-}
-
-.accordion {
-  border-bottom: solid 1px #ccc;
-}
-.accordion summary {
-  cursor: pointer;
-  padding: 0.5em 0;
-  font-weight: bold;
-  list-style-type: none;
-  color: #225E90;
-}
-.accordion summary::-webkit-details-marker {
-  display: none;
-}
-.accordion summary > * {
-  display: inline; /* so that block level elements don't wrap below marker when there is not enough space */
-  margin: 0;
-}
-.accordion summary::before {
-  content: "";
-  background: url(../img/down.svg) no-repeat;
-  background-size: 20px;
-  background-position: center center;
-  width: 20px;
-  height: 21px;
-  display: inline-block;
-  vertical-align: text-bottom;
-  margin-right: 5px;
-}
-.accordion[open] summary::before {
-  background-image: url(../img/up.svg);
-}
-.accordion__content {
-  padding-bottom: 1em;
-}
-.accordion__content > *:first-child {
-  margin-top: 0;
-}
-
-form {
-  margin-top: 30px;
-  /* to avoid zooming on iPhone when input or textarea get the focus we need to set font-size at least to 16px */
-  /* fix styling of date input fields on iphone */
-}
-form input, form textarea {
-  font-size: 16px;
-}
-form input[type=date] {
-  -webkit-appearance: none;
-  min-height: 2em;
-  background: none;
-}
-form input[type=checkbox] {
-  margin: 0 3px 0 0;
-}
-form button {
-  font-size: 18px;
-  background: #225E90;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  margin: 20px 0;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  form button {
-    font-size: 22px;
-    padding: 10px 20px;
-  }
-}
-form .row {
-  display: block;
-  margin-top: 10px;
-}
-form .row.required > label::after, form .row.required > p:first-child::after {
-  content: "*";
-  margin-left: 2px;
-}
-form .row.hidden {
-  display: none;
-}
-form .row--two-columns label {
-  display: inline-block;
-  min-width: 200px;
-  vertical-align: top;
-}
-form .row--two-columns input {
   width: 100%;
-  border: solid 1px #ccc;
-  border-radius: 0;
-  padding: 5px;
-  box-sizing: border-box;
+  display: block;
 }
 @media (min-width: 768px) {
-  form .row--two-columns input {
-    width: auto;
-    min-width: 300px;
+  .stage img {
+    position: absolute;
+  }
+  .psychotherapie .stage img {
+    bottom: 0;
+  }
+  .partner .stage img, .datenschutz .stage img, .kontakt .stage img, .impressum .stage img {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .organisationsberatung .stage img, .coaching .stage img, .blog .stage img {
+    top: -40px;
   }
 }
-form .row textarea {
-  border: solid 1px #ccc;
-  border-radius: 0;
-  padding: 5px;
+
+.blog section {
+  margin-top: 2rem;
+  border-bottom: solid 1px #D7C989;
+  padding-bottom: 2rem;
 }
-@media (min-width: 768px) {
-  form .row textarea {
-    max-width: 650px;
-  }
+.blog section:last-of-type {
+  border: 0;
+}
+.blog time {
+  color: #666;
+}
+.blog time + h2 {
+  margin-top: 0.2rem;
+}
+.blog--post {
+  margin-top: 2em;
 }
