@@ -1,6 +1,4 @@
-'use strict';
-
-class Navigation {
+export default class Navigation {
 	constructor(options) {
 		this.maxHeight = undefined;
 		this.el = options.element;
@@ -10,7 +8,7 @@ class Navigation {
 		if (this.el.getAttribute('data-set-max-height')) {
 			this.el.style.maxHeight = 0;
 
-			const observer = new MutationObserver(function (event) {
+			const observer = new MutationObserver(function () {
 				self.update();
 			});
 

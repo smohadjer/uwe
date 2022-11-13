@@ -1,13 +1,16 @@
-header .hamburger {
+.header .hamburger {
 	vertical-align: middle;
 	padding: 0;
-
-	.no-js & {
-		display: none;
-	}
+	//padding-bottom: 20px;
 
 	&:focus {
 		outline: none;
+	}
+
+	span.hamburger-inner {
+		&, &::before, &::after {
+			background-color: $blue;
+		}
 	}
 
 	&:hover {
@@ -22,15 +25,10 @@ header .hamburger {
 		border-radius: 0;
 	}
 
-  .hamburger-box {
-    width: 30px;
-  }
-
-  .hamburger-inner, 
-  .hamburger-inner::before, 
-  .hamburger-inner::after {
-    width: 30px;
-		height: 3px;
-		background-color: black;
-  }
+	.hamburger-label {
+		font-size: 16px;
+		margin-left: 5px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
 }

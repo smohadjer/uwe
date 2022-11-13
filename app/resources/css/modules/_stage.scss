@@ -1,0 +1,37 @@
+.stage {
+	overflow: hidden;
+	margin-bottom: 20px;
+
+	@media (min-width: 768px) {
+		position: relative;
+		margin-bottom: 40px;
+		height: 400px;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+
+		@media (min-width: 768px) {
+			position: absolute;
+
+			.psychotherapie & {
+				bottom: 0;
+			}
+
+			.partner &,
+			.datenschutz &,
+			.kontakt &,
+			.impressum & {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			.organisationsberatung &,
+			.coaching &,
+			.blog & {
+				top: -40px;
+			}
+		}
+	}
+}

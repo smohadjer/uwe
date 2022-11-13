@@ -1,32 +1,16 @@
-footer {
-  padding: 15px;
+.footer {
+	border-top: solid 3px $bronze;
+	padding: 15px 20px;
 	margin-top: 40px;
-	margin-bottom: 20px;
-  border-top: solid 1px #ccc;
-  font-size: 1rem;
 
-  @media (min-width: 1320px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
+	a {
+		text-decoration: none;
+	}
 
-  .footer__content {
-    color: #666;
-
-    .copyright {
-      margin-bottom: 0.5em;
-      display: block;
-    }
-
-    @media (min-width: 1024px) {
-      display: flex;
-      justify-content: space-between;
-
-      &:last-child {
-        text-align: right;
-      }
-    }
-  }
+	@media (min-width: 1280px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	ul {
 		list-style: none;
@@ -36,10 +20,6 @@ footer {
 		li {
 			display: inline;
 			margin-right: 10px;
-
-      &:last-child {
-        margin-right: 0;
-      }
 		}
 	}
 }

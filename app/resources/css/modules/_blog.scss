@@ -1,0 +1,23 @@
+.blog {
+	section {
+		margin-top: 2rem;
+		border-bottom: solid 1px $bronze;
+		padding-bottom: 2rem;
+
+		&:last-of-type {
+			border: 0;
+		}
+	}
+
+	time {
+		color: #666;
+
+		+ h2 {
+			margin-top: 0.2rem;
+		}
+	}
+
+	&--post {
+		margin-top: 2em;
+	}
+}
