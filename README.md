@@ -1,2 +1,2 @@
-https://uwe-zimmer.com/
-https://smohadjer.github.io/uwe/
+- https://uwe-zimmer.com/
+- https://smohadjer.github.io/uwe/
