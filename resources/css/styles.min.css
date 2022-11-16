@@ -965,7 +965,7 @@ main > article li {
   .psychotherapie .stage img {
     bottom: 0;
   }
-  .partner .stage img, .datenschutz .stage img, .kontakt .stage img, .impressum .stage img {
+  .partner .stage img, .datenschutz .stage img, .kontakt .stage img, .impressum .stage img, .abrechnung .stage img {
     top: 50%;
     transform: translateY(-50%);
   }
