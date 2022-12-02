@@ -962,7 +962,7 @@ main > article li {
   .stage img {
     position: absolute;
   }
-  .psychotherapie .stage img {
+  .videopraxis .stage img, .psychotherapie .stage img {
     bottom: 0;
   }
   .partner .stage img, .datenschutz .stage img, .kontakt .stage img, .impressum .stage img, .abrechnung .stage img {
