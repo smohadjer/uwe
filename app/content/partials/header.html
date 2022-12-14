@@ -1,0 +1,22 @@
+<header class="header">
+	<a class="logo" href="index.html">Uwe Zimmer</a>
+
+	<button class="hamburger hamburger--spin" type="button">
+		<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		</span>
+		<!--<span class="hamburger-label">Menu</span>-->
+	</button>
+	
+  <nav data-set-max-height="true">
+    <ul>
+      <li>{{#if (eq pageId 'index')}}Home{{else}}<a href="/index.html">Home</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'psychotherapie')}}Psychotherapie{{else}}<a href="/psychotherapie.html">Psychotherapie</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'coaching')}}Coaching{{else}}<a href="/coaching.html">Coaching</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'organisationsberatung')}}Organisationsberatung{{else}}<a href="/organisationsberatung.html">Organisationsberatung{{/if}}</a></li>
+      <li>{{#if (eq pageId 'videopraxis')}}Videopraxis{{else}}<a href="/videopraxis.html">Videopraxis{{/if}}</a></li>
+      <li>{{#if (eq pageId 'partner')}}Oberberg City{{else}}<a href="/partner.html">Oberberg City{{/if}}</a></li>
+      <li>{{#if (eq pageId 'kontakt')}}Kontakt{{else}}<a href="/kontakt.html">Kontakt{{/if}}</a></li>
+    </ul>
+  </nav>
+</header>
